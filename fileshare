@@ -1,1 +1,91 @@
 fileshare
+
+
+[xbhagatdsa@c0040l0059n ~]$ openssl s_client -connect 10.75.80.208:443
+CONNECTED(00000003)
+depth=0 C = US, ST = WI, L = Milwaukee, O = Clarios, OU = IT, CN = aiops-qa.clarios.com, emailAddress = Avinash.sharma-ext@clarios.com
+verify error:num=20:unable to get local issuer certificate
+verify return:1
+depth=0 C = US, ST = WI, L = Milwaukee, O = Clarios, OU = IT, CN = aiops-qa.clarios.com, emailAddress = Avinash.sharma-ext@clarios.com
+verify error:num=21:unable to verify the first certificate
+verify return:1
+---
+Certificate chain
+ 0 s:/C=US/ST=WI/L=Milwaukee/O=Clarios/OU=IT/CN=aiops-qa.clarios.com/emailAddress=Avinash.sharma-ext@clarios.com
+   i:/DC=com/DC=clarios/CN=Clarios Enterprise Certificate Authority
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIFhzCCBG+gAwIBAgITGAABRER82WY1qb7gxwABAAFERDANBgkqhkiG9w0BAQsF
+ADBhMRMwEQYKCZImiZPyLGQBGRYDY29tMRcwFQYKCZImiZPyLGQBGRYHY2xhcmlv
+czExMC8GA1UEAxMoQ2xhcmlvcyBFbnRlcnByaXNlIENlcnRpZmljYXRlIEF1dGhv
+cml0eTAeFw0yMzAyMjEyMTEwMTFaFw0yNTAyMjAyMTEwMTFaMIGbMQswCQYDVQQG
+EwJVUzELMAkGA1UECBMCV0kxEjAQBgNVBAcTCU1pbHdhdWtlZTEQMA4GA1UEChMH
+Q2xhcmlvczELMAkGA1UECxMCSVQxHTAbBgNVBAMTFGFpb3BzLXFhLmNsYXJpb3Mu
+Y29tMS0wKwYJKoZIhvcNAQkBFh5BdmluYXNoLnNoYXJtYS1leHRAY2xhcmlvcy5j
+b20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQD0AaCSeQibSnFJTIxu
+d8h+LxzxKmvnkPanml2otVi7wwThBKwIkd5UY3plcr42XbTEZxqTG5FhcpbgDMfZ
+4GpwieJBX4Y4D2eZupVaDglupKviaLKhaEj72C/ISusToVa4PgyV5j+IEuP0v6R9
+99/OwSNQ2EPC94qoXRMfhn87xW9O76mkF85bc39ZAcn1+qIZWTnbaJvuxZgI9o+7
+t+2J1rgPbfTy96EqoLMfKPMmxgU95+Yyf97u1rtBsjSsoYgTghWI4JAjrus6rbWD
+gpPFLu2RtP+/GszCRHczuRzEy44S3QdDDnlzgwj9cbPZiMsQSgzL3WxOXkkdqWwi
+FM8/AgMBAAGjggH7MIIB9zAdBgNVHQ4EFgQU2cGWg5YLQCaQ8DX+ab1EbmtZCFow
+HwYDVR0jBBgwFoAUjUl6s5DUjQY9zaiHPHdAbrYGfNkwXgYDVR0fBFcwVTBToFGg
+T4ZNaHR0cDovL3BraS5jbGFyaW9zLmNvbS9jZHAvQ2xhcmlvcyUyMEVudGVycHJp
+c2UlMjBDZXJ0aWZpY2F0ZSUyMEF1dGhvcml0eS5jcmwwgbMGCCsGAQUFBwEBBIGm
+MIGjMHgGCCsGAQUFBzAChmxodHRwOi8vcGtpLmNsYXJpb3MuY29tL2FpYS9OMDQ2
+OVcwMDAyUC1QS0kuY2xhcmlvcy5jb21fQ2xhcmlvcyUyMEVudGVycHJpc2UlMjBD
+ZXJ0aWZpY2F0ZSUyMEF1dGhvcml0eSgxKS5jcnQwJwYIKwYBBQUHMAGGG2h0dHA6
+Ly9wa2kuY2xhcmlvcy5jb20vb2NzcDAOBgNVHQ8BAf8EBAMCBaAwPAYJKwYBBAGC
+NxUHBC8wLQYlKwYBBAGCNxUIh5aJF4bMwFSH+ZcMhY+aOoLAy0QsqOAYh8vEdAIB
+ZAIBGTATBgNVHSUEDDAKBggrBgEFBQcDATAbBgkrBgEEAYI3FQoEDjAMMAoGCCsG
+AQUFBwMBMB8GA1UdEQQYMBaCFGFpb3BzLXFhLmNsYXJpb3MuY29tMA0GCSqGSIb3
+DQEBCwUAA4IBAQAFjCnW20KNBPj+36SD+mFax3YRygNqszgfZeIP2prgxbesh8ib
+MMq1Vnev6zVmH7hWiEIRSWson5tpSN6WIhtFuQ+j0L0jmJ1BwNCbZeb9h9XjAL7T
+I3Ey1gpNCdfWTPAC6z5q0jWJXvNT7g2qteP783lAaUzQfQ4inHTo/pPPlb8MPo3Y
+ueeVlnX5RVN2nY/AXNUO9bGwJiaoJip9rJG8DyKPTTKnafKkzyC+hEGPGgLSX0Yr
+MohHDywPz3gQgASzug34ciapw5Jghl76mMIPK78TMAmQMraROFDReesl9tsHKhEq
+wviGbBS8Q5ZbvTf2SZvvSz6+c0M9ZV/x7A5t
+-----END CERTIFICATE-----
+subject=/C=US/ST=WI/L=Milwaukee/O=Clarios/OU=IT/CN=aiops-qa.clarios.com/emailAddress=Avinash.sharma-ext@clarios.com
+issuer=/DC=com/DC=clarios/CN=Clarios Enterprise Certificate Authority
+---
+No client certificate CA names sent
+Peer signing digest: SHA512
+Server Temp Key: ECDH, P-256, 256 bits
+---
+SSL handshake has read 2089 bytes and written 415 bytes
+---
+New, TLSv1/SSLv3, Cipher is ECDHE-RSA-AES256-GCM-SHA384
+Server public key is 2048 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+SSL-Session:
+    Protocol  : TLSv1.2
+    Cipher    : ECDHE-RSA-AES256-GCM-SHA384
+    Session-ID: FCD0A19BE09D8C190AAA8FCF39582D8C081D4C00CD6C7D23A2C458BFDDAADC67
+    Session-ID-ctx:
+    Master-Key: 5627E9C72D8F56F127D2353081B1DCA9857AEC619BAE9A088CE09BB7092B376D60260A5BBDD8F80F367D6304E6B508AD
+    Key-Arg   : None
+    Krb5 Principal: None
+    PSK identity: None
+    PSK identity hint: None
+    TLS session ticket lifetime hint: 300 (seconds)
+    TLS session ticket:
+    0000 - 64 76 c0 a7 e3 c9 a6 44-84 b0 09 9d 2a 46 68 a7   dv.....D....*Fh.
+    0010 - f7 97 d3 6a fd 97 86 11-c8 1b f2 3c cd b9 c5 2b   ...j.......<...+
+    0020 - 9a 21 82 cf 7a 2e 87 30-a1 a5 97 65 88 46 0f 2d   .!..z..0...e.F.-
+    0030 - 79 35 22 48 42 99 4f 62-65 76 f9 ab 7f 5c 3a 8d   y5"HB.Obev...\:.
+    0040 - 59 fa dd 07 88 bc 70 b1-03 19 ee 2e 96 a1 99 dc   Y.....p.........
+    0050 - a1 fd c6 ad 9f b7 e6 7a-51 ea 7f 6a 22 7a ab 92   .......zQ..j"z..
+    0060 - 63 0d 9a 10 9d e8 44 3b-01 9d e2 dd ef a7 4a 01   c.....D;......J.
+    0070 - cf 33 63 46 80 60 5c 64-8a 15 98 8c 8a 92 b1 82   .3cF.`\d........
+    0080 - 78 c5 6a 60 f8 fa 3d 7c-29 d3 1d 48 f0 38 d8 ec   x.j`..=|)..H.8..
+    0090 - a2 6b d4 f3 e5 84 ba 07-5f 57 4e 71 64 a4 af 3a   .k......_WNqd..:
+    00a0 - 85 4a 75 cc d5 9e 9b 9e-6e ca 1b 34 88 39 a5 f5   .Ju.....n..4.9..
+
+    Start Time: 1694019381
+    Timeout   : 300 (sec)
+    Verify return code: 21 (unable to verify the first certificate)
