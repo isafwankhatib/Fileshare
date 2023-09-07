@@ -94,3 +94,47 @@ SSL-Session:
 ssldragon.com/how-to/install-ssl-certificate/nginx/#nginx-install
 
 REQ0239974  RITM3532626
+
+
+#!/usr/bin/python3
+
+from datetime import datetime
+import os
+import requests
+import json
+
+#url = "https://C0040l0044p.clarios.com:58083/sccwebclient/svc/activealerts"
+urldev = "https://n0469l0119n.clarios.com:58083/sccwebclient/svc/activealerts"
+headers = {'content-type':'application/json ; charset=utf-8'}
+#response = requests.get(url,auth=('aiopsusr','password'),headers={'accept':'application/json'},verify=False)
+response = requests.get(urldev,auth=('aiopsusr','password'),headers={'accept':'application/json'},verify=False)
+alert_raw = response.json()
+print(alert_raw)
+alert_parsed = alert_raw['data']['activeAlerts']
+with open('/usr/openv/ibm_script_dev/alertIDdev.txt') as idfile:
+    idfile_list = idfile.read().splitlines()
+    idfile_list = ' '.join(idfile_list).split()
+    idfile_list = [int(i) for i in idfile_list]
+ #   print(idfile_list, type(idfile_list[1]))
+
+for n in range(0,len(alert_parsed)):
+    data = alert_raw['data']['activeAlerts'][n]
+    tempID = data['alertId']
+    tempID1 = int(tempID)
+    #print(type(newID) , type(tempID1))
+    if tempID1 not in idfile_list:
+        data['description'] = data['actionId'] +data['nodeId']
+        #print(data)
+        r=requests.post('https://aiops-qa.clarios.com/aiops/connector-svc/v2/webhook/cs_ibmc_wh',json=data,verify=False)
+ #       print('Status Code:', r.status_code)
+        r.json()
+         #       newID = int(data['alertId'])
+        #print(type(newID))
+        with open('/usr/openv/ibm_script_dev/alertIDdev.txt','a+') as outfile:
+            outfile.seek(0)
+            num = outfile.read(100)
+            if len(data) > 0:
+                outfile.write("\n")
+            json.dump(tempID1, outfile)
+
+
