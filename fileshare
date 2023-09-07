@@ -89,3 +89,6 @@ SSL-Session:
     Start Time: 1694019381
     Timeout   : 300 (sec)
     Verify return code: 21 (unable to verify the first certificate)
+
+
+ssldragon.com/how-to/install-ssl-certificate/nginx/#nginx-install
