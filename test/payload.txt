@@ -13,7 +13,7 @@
       "error_type":"EXPRESSION",
       "description":"uat-ex-wechat-ex0005-v1 | event: 96c14bd0-b6dd-11eb-974c-166e43c47b59 status: ERROR, correlationId: C0513 | 96c14bd0-b6dd-11eb-974c-166e43c47b59, applicationName: uat-sa-sfdc-sa0014-v1, businessIDType: Claim ID, businessIDValue: LP202102020001, errorCode: 500, errorType: EXPRESSION, errorCategory: MULE, errorMessage: duplicate value found: Claim_Number__c duplicates value on record with id: aAB2S000000fxog(), errorCause: duplicate value found: Claim_Number__c duplicates value on record with id: aAB2S000000fxog(), errorDetail: duplicate value found: Claim_Number__c duplicates value on record with id: aAB2S000000fxog()",
       "source":"Splunk",
-      "actual_timestamp":"2021-05-17 07:00:42.056",
+      "actual_timestamp":"2023-09-11 07:00:42.056",
       "alert_state":"ERROR",
       "cmdb_ci":"uat-ex-wechat-ex0005-v1",
       "Flow_Number":"C0513"
