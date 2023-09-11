@@ -1,2 +1,21 @@
 {'data': {'sid': 'scheduler__xmalavat_ZWktbXVsZXNvZnQ__RMD5b8a6d3ff3f8961e7_at_1694412120_37666', 'search_name': 'EI-Non-Prod: Splunk to AIOPS Webhook Alert', 'app': 'ei-mulesoft', 'owner': 'xmalavat', 'results_link': 'https://clariosit.splunkcloud.com:443/app/ei-mulesoft/search?q=%7Cloadjob%20scheduler__xmalavat_ZWktbXVsZXNvZnQ__RMD5b8a6d3ff3f8961e7_at_1694412120_37666%20%7C%20head%201%20%7C%20tail%201&earliest=0&latest=now', 'result': {'alert_types': 'Transactional', 'tracing_id': '7a047f40-5068-11ee-b864-0a219fd6924d', 'error_type': 'TIMEOUT', 'description': "C0448|7a047f40-5068-11ee-b864-0a219fd6924d, Flow_Status : ERROR, API_Status : CONNECTIVITY-ERROR, Application_Name : uat-pi-pay-rates-pi0004-v1, Business_ID_Type : ProcessingType,Business_ID_Value :  IRD Rates, Log_Type : ERROR, Error_Code : 500, Error_Type : TIMEOUT, Error_Message : HTTP GET on resource 'https://internal-clarios-test-internal.lb.anypointdns.net:443/uat-sa-ird-sa0005-v1/api/pay-rates' failed: Timeout exceeded.", 'source': 'Splunk', 'actual_timestamp': '2023-09-11 06:01:20.7', 'alert_state': 'ERROR', 'cmdb_ci': 'uat-pi-pay-rates-pi0004-v1', 'Flow_Number': 'C0448'}}, 'meta': {'identifier': 'cs_splunkc_wh', 'integration_type': 'monitoring', 'operational_state': 'live', 'tool_name': 'Splunk'}}
 {"sid": "scheduler__xsalunkmsa_ZWktbXVsZXNvZnQ__RMD58e65d58665a9e191_at_1621235100_15392", "search_name": "webhook Testing 3", "app": "ei-mulesoft", "owner": "xsalunkmsa", "results_link": "https://clariosit.splunkcloud.com:443/app/ei-mulesoft/@go?sid=scheduler__xsalunkmsa_ZWktbXVsZXNvZnQ__RMD58e65d58665a9e191_at_1621235100_15392%22, "result": {"alert_types": "Transactional", "ci": "Mulesoft GLBL", "tracing_id": "96c14bd0-b6dd-11eb-974c-166e43c47b59", "error_type": "EXPRESSION", "description": "uat-ex-wechat-ex0005-v1|event:96c14bd0-b6dd-11eb-974c-166e43c47b59 status: ERROR, correlationId: C0513|96c14bd0-b6dd-11eb-974c-166e43c47b59, applicationName: uat-sa-sfdc-sa0014-v1, businessIDType: Claim ID, businessIDValue: LP202102020001, errorCode: 500, errorType: EXPRESSION, errorCategory: MULE, errorMessage: duplicate value found: Claim_Number__c duplicates value on record with id: aAB2S000000fxog(), errorCause: duplicate value found: Claim_Number__c duplicates value on record with id: aAB2S000000fxog(), errorDetail: duplicate value found: Claim_Number__c duplicates value on record with id: aAB2S000000fxog()", "source": "Splunk", "actual_timestamp": "2021-05-17 07:00:42.056", "alert_state": "ERROR", "cmdb_ci": "uat-ex-wechat-ex0005-v1", "Flow_Number": "C0513"}}
+{
+   "sid":"scheduler__xsalunkmsa_ZWktbXVsZXNvZnQ__RMD58e65d58665a9e191_at_1621235100_15392",
+   "search_name":"webhook Testing 3",
+   "app":"ei-mulesoft",
+   "owner":"xsalunkmsa",
+   "results_link":"https://clariosit.splunkcloud.com:443/app/ei-mulesoft/@go?sid=scheduler__xsalunkmsa_ZWktbXVsZXNvZnQ__RMD58e65d58665a9e191_at_1621235100_15392",
+   "result":{
+      "alert_types":"Transactional",
+      "ci":"Mulesoft GLBL",
+      "tracing_id":"96c14bd0-b6dd-11eb-974c-166e43c47b59",
+      "error_type":"EXPRESSION",
+      "description":"uat-ex-wechat-ex0005-v1 | event: 96c14bd0-b6dd-11eb-974c-166e43c47b59 status: ERROR, correlationId: C0513 | 96c14bd0-b6dd-11eb-974c-166e43c47b59, applicationName: uat-sa-sfdc-sa0014-v1, businessIDType: Claim ID, businessIDValue: LP202102020001, errorCode: 500, errorType: EXPRESSION, errorCategory: MULE, errorMessage: duplicate value found: Claim_Number__c duplicates value on record with id: aAB2S000000fxog(), errorCause: duplicate value found: Claim_Number__c duplicates value on record with id: aAB2S000000fxog(), errorDetail: duplicate value found: Claim_Number__c duplicates value on record with id: aAB2S000000fxog()",
+      "source":"Splunk",
+      "actual_timestamp":"2021-05-17 07:00:42.056",
+      "alert_state":"ERROR",
+      "cmdb_ci":"uat-ex-wechat-ex0005-v1",
+      "Flow_Number":"C0513"
+   }
+}
