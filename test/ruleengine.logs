@@ -1,0 +1,55 @@
+rule engine logs
+
+[2023-09-12 10:57:46 +0000] [14] [DEBUG] GET /aiops/rule-engine-svc/v1/health-check
+[2023-09-12 10:57:46,261] ::: DEBUG :::  :::  Health_Check_RE :::  /app/rule_engine_service/routes.py - routes ::: health_check ::: 70 ::: Performing HealthCheck !!!
+[2023-09-12 10:57:46,652] ::: DEBUG :::  :::  Health_Check_RE :::  /app/rule_engine_service/routes.py - routes ::: health_check ::: 85 ::: {'database': 'connected', 'kafka': 'connected', 'services': ['http://aiops-action-service/aiops/action-svc/: connected', 'http://aiops-cmdb-service/aiops/cmdb-svc/: connected', 'http://aiops-database-service/aiops/db-svc/: connected', 'http://aiops-scheduler-service/aiops/scheduler-svc/: connected', 'http://aiops-application-service/aiops/application-svc/: connected'], 'status': 'up'}
+[2023-09-12 10:57:46 +0000] [14] [DEBUG] Closing connection.
+127.0.0.1 - - [12/Sep/2023:10:57:46 +0000] "GET /aiops/rule-engine-svc/v1/health-check HTTP/1.1" 200 377 "-" "curl/7.77.0"
+[2023-09-12 10:57:46 +0000] [18] [DEBUG] GET /aiops/rule-engine-svc/v1/start-all
+[2023-09-12 10:57:46,667] ::: INFO :::  :::  rule_engine_service :::  /app/rule_engine_service/routes.py - routes ::: auto_start ::: 226 ::: Fetching all active sources
+[2023-09-12 10:57:46 +0000] [15] [DEBUG] GET /aiops/rule-engine-svc/v1/start-kafka
+[2023-09-12 10:57:46,681] ::: INFO :::  :::  Health_Check_RE :::  /app/rule_engine_service/routes.py - routes ::: kafka_consumer ::: 110 ::: green_thread_count: 0
+127.0.0.1 - - [12/Sep/2023:10:57:46 +0000] "GET /aiops/rule-engine-svc/v1/start-kafka?channel_id=ch_dam&consumer_topic=re_alerts_dam&source_name=re_alerts_dam&threads=5&consumer_config=%7B%22enable_auto_commit%22%3A+false%2C%22max_poll_records%22%3A+3%2C%22max_poll_interval_ms%22%3A+300000%2C%22session_timeout_ms%22%3A+9000%7D HTTP/1.1" 200 37 "-" "python-requests/2.21.0"
+[2023-09-12 10:57:46 +0000] [15] [DEBUG] Closing connection.
+[2023-09-12 10:57:46 +0000] [24] [DEBUG] GET /aiops/rule-engine-svc/v1/start-kafka
+[2023-09-12 10:57:46,692] ERROR in app: Exception on /aiops/rule-engine-svc/v1/start-kafka [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.6/site-packages/connexion/decorators/decorator.py", line 48, in wrapper
+    response = function(request)
+  File "/usr/local/lib/python3.6/site-packages/connexion/decorators/uri_parsing.py", line 143, in wrapper
+    response = function(request)
+  File "/usr/local/lib/python3.6/site-packages/connexion/decorators/validation.py", line 347, in wrapper
+    return function(request)
+  File "/usr/local/lib/python3.6/site-packages/connexion/decorators/parameter.py", line 126, in wrapper
+    return function(**kwargs)
+  File "/app/rule_engine_service/routes.py", line 106, in kafka_consumer
+    green_thread_count = int(get_greenlet_status(source)[1])
+  File "/app/rule_engine_service/routes.py", line 206, in get_greenlet_status
+    status = _get_status(GREENLETS, source['channel_id'])
+  File "/app/rule_engine_service/routes.py", line 152, in _get_status
+    _thread_count_to_file(green_thread.args[0]['channel_id'], str(running))
+IndexError: tuple index out of range
+127.0.0.1 - - [12/Sep/2023:10:57:46 +0000] "GET /aiops/rule-engine-svc/v1/start-kafka?channel_id=ch_gtr&consumer_topic=re_no_touch_gtr&source_name=re_no_touch_gtr&threads=1&consumer_config=%7B%22enable_auto_commit%22%3A+false%2C%22max_poll_records%22%3A+3%2C%22max_poll_interval_ms%22%3A+300000%2C%22session_timeout_ms%22%3A+9000%7D HTTP/1.1" 500 252 "-" "python-requests/2.21.0"
+[2023-09-12 10:57:46 +0000] [24] [DEBUG] Closing connection.
+[2023-09-12 10:57:46 +0000] [15] [DEBUG] GET /aiops/rule-engine-svc/v1/start-kafka
+[2023-09-12 10:57:46,702] ::: INFO :::  :::  Health_Check_RE :::  /app/rule_engine_service/routes.py - routes ::: kafka_consumer ::: 110 ::: green_thread_count: 0
+127.0.0.1 - - [12/Sep/2023:10:57:46 +0000] "GET /aiops/rule-engine-svc/v1/start-kafka?channel_id=ch_app_alerts&consumer_topic=re_nr_app&source_name=re_nr_app&threads=5&consumer_config=%7B%22enable_auto_commit%22%3A+false%2C%22max_poll_records%22%3A+3%2C%22max_poll_interval_ms%22%3A+300000%2C%22session_timeout_ms%22%3A+9000%7D HTTP/1.1" 200 44 "-" "python-requests/2.21.0"
+[2023-09-12 10:57:46 +0000] [15] [DEBUG] Closing connection.
+[2023-09-12 10:57:46 +0000] [15] [DEBUG] GET /aiops/rule-engine-svc/v1/start-kafka
+[2023-09-12 10:57:46,716] ::: INFO :::  :::  Health_Check_RE :::  /app/rule_engine_service/routes.py - routes ::: kafka_consumer ::: 110 ::: green_thread_count: 0
+127.0.0.1 - - [12/Sep/2023:10:57:46 +0000] "GET /aiops/rule-engine-svc/v1/start-kafka?channel_id=ch_custom&consumer_topic=re_correlation&source_name=re_correlation&threads=1&consumer_config=%7B%22enable_auto_commit%22%3A+false%2C%22max_poll_records%22%3A+3%2C%22max_poll_interval_ms%22%3A+300000%2C%22session_timeout_ms%22%3A+9000%7D HTTP/1.1" 200 40 "-" "python-requests/2.21.0"
+[2023-09-12 10:57:46 +0000] [15] [DEBUG] Closing connection.
+127.0.0.1 - - [12/Sep/2023:10:57:46 +0000] "GET /aiops/rule-engine-svc/v1/start-all HTTP/1.1" 200 358 "-" "curl/7.77.0"
+[2023-09-12 10:57:46 +0000] [18] [DEBUG] Closing connection.
