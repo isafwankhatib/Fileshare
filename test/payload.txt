@@ -19,3 +19,10 @@
       "Flow_Number":"C0513"
    }
 }
+
+
+{ "sid": "scheduler_bWFuaXNoLjEucmFuamFuLWV4dHNhMUBvbmVjbGFyaW9zLmNvbQ__search__RMD58e65d58665a9e191_at_1605252300_29409", "search_name": "webhook Testing 3", "app": "search", "owner": "", "results_link": "", "result": { "alert_types": "Transactional", "description": "Processing Completed to get Credit Info from QAD-CHINA.", "source": "Splunk", "actual_timestamp": "2020-11-13 07:16:59.900", "alert_state": "ERROR", "cmdb_ci": "sa-sfdc-sa0014-v1", "Flow_Number": "", "error_type": "CONNECTIVITY", "tracing_id": "" } }
+
+ 
+
+{ "sid": "scheduler_bWFuaXNoLjEucmFuamFuLWV4dHNhMUBvbmVjbGFyaW9zLmNvbQ__search__RMD58e65d58665a9e191_at_1605252300_29409", "search_name": "webhook Testing 3", "app": "search", "owner": "", "results_link": "", "result": { "cmdb_ci": "", "alert_state": "INFO", "alert_types": "Platform", "description": "dev-sa-vendavo-sa0036-v1 deployment-success", "actual_timestamp": "2021-02-01 10:12:45.496", "source": "Splunk", "Flow_Number": "4", "error_type": "AMQ critical threshold alert", "tracing_id": "" } }
