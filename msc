@@ -1,6 +1,3 @@
-CN = aiops-authqa.clarios.com
-OU = Clarios IT
-O = Clarios
-L = Glendale
-ST = Wisconsin
-C = US
+openssl genrsa -out client.key 2048
+openssl req -sha512 -new -key client.key -out client.csr -config client.conf
+openssl x509 -days 365 -req -sha512 -in client.csr -CAserial ../../serial -CA ../../joritz-logaggregator-ca.crt -CAkey ../../joritz-logaggregator-ca.key -out client.crt -extensions v3_req -extensions usr_cert -extfile client.conf
