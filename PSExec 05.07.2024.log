@@ -1,0 +1,12 @@
+5/7/2024 5:56:14 AM ServiceLog INFO Service Started
+5/7/2024 5:56:19 AM ServiceLog INFO Module Imported
+5/7/2024 5:56:19 AM ServiceLog INFO URL formed: ssl://10.198.164.163:443?transport.acceptInvalidBrokerCert=true&transport.clientcertfilename=E:\MS-PSEXECUTOR-3.0.0\cert\artemis.cer&transport.sendBufferSize=1048576&transport.useInactivityMonitor=false&transport.receiveBufferSize=1048576&transport.SslProtocol=Tls12&connectionTtl=30000&clientFailureCheckPeriod=20000
+5/7/2024 5:56:19 AM ServiceLog INFO Connected to Connection Factory ssl://10.198.164.163:443/?transport.useinactivitymonitor=false&transport.clientcertfilename=E:%5cMS-PSEXECUTOR-3.0.0%5ccert%5cartemis.cer&clientfailurecheckperiod=20000&transport.sendbuffersize=1048576&transport.acceptinvalidbrokercert=true&transport.sslprotocol=Tls12&transport.receivebuffersize=1048576&connectionttl=30000
+5/7/2024 5:56:40 AM ERROR Error connecting to 10.198.164.163:443.
+5/7/2024 5:56:40 AM ERROR    at Apache.NMS.ActiveMQ.Transport.Tcp.TcpTransportFactory.DoConnect(String host, Int32 port, String localAddress, Int32 localPort)
+   at Apache.NMS.ActiveMQ.Transport.Tcp.TcpTransportFactory.CompositeConnect(Uri location)
+   at Apache.NMS.ActiveMQ.Transport.Tcp.TcpTransportFactory.CreateTransport(Uri location)
+   at Apache.NMS.ActiveMQ.ConnectionFactory.CreateActiveMQConnection(String userName, String password)
+   at EXECUTORBOT5._1.Startup.Connection(String url, String port, String username, String password)
+5/7/2024 5:56:40 AM ERROR Object reference not set to an instance of an object.
+5/7/2024 5:56:40 AM ERROR    at EXECUTORBOT5._1.Service1.OnStart(String[] args)
