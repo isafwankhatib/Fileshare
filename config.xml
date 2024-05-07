@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<configuations>
+	<configServer>
+		<uuid>0d9c29a2-7848-0750-1a43-0401382e0663</uuid>
+		<parentUUID>2689c861-3573-aabe-5c0d-9e67c0ee682b</parentUUID>
+		<!--<url>aks-braiopool-59727633-vmss000000</url>.53--> 
+		<url>10.198.164.163</url>
+		<user>artemis</user>
+		<password>YjYzYmU0MDZiZWUyZjk2NDRlNmZiYTQ2</password>
+		<portNo>443</portNo>
+		<trustStoreFile>cert\artemis.cer</trustStoreFile>
+		<encryptionKey>1Huiofh6qwe123dF</encryptionKey>
+		<sendBufferSize>1048576</sendBufferSize>
+		<receiveBufferSize>1048576</receiveBufferSize>
+		
+	</configServer>
+	
+	
+	<queue>
+		<consQueue>braio.scripting.inbound.queue</consQueue>
+		<prodQueue>braio.remote.inbound.queue</prodQueue>				
+		<fbQueue>braio.ms.feedback.queue</fbQueue>
+		<logQueue>braio.ms.logging.queue</logQueue>
+		<endReplyToQueue>braio.scripting.outbound.queue</endReplyToQueue>
+		<executorRegistrationQueue>braio.executor.registration.queue</executorRegistrationQueue>
+		<dmsInboundQueue>braio.dms.inbound.queue</dmsInboundQueue>
+		<dmsOutboundQueue>braio.dms.outbound.queue</dmsOutboundQueue>
+	</queue>
+	
+	<vault>
+		<vaultBaseAddr>https://10.198.164.163:443</vaultBaseAddr>
+		<masterKeystorePath>D:\MS-PSEXECUTOR-3.0.0\cert\plugin-auth.p12</masterKeystorePath>
+		<masterKeystorePass>WXpReU1HVm1ORGM0TjJZM056bG1NVEpsTjJJNE4yRms=</masterKeystorePass>
+		<masterVaultCertLoginURI>https://10.198.164.163:443/v1/auth/cert/login</masterVaultCertLoginURI>
+		<masterVaultPluginDisplayName>plugin-auth</masterVaultPluginDisplayName>
+		<sslProtocolSupport>TLS12</sslProtocolSupport>
+		<installCertFilePath>D:\MS-PSEXECUTOR-3.0.0\Vault\vault.crt</installCertFilePath>
+		<vaultBaseMountType>kv</vaultBaseMountType>		
+	</vault>
+
+	
+</configuations>
