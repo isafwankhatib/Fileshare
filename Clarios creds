@@ -21,3 +21,10 @@ c0040l0063p
 c0040l0065n
 c0040w0071p
 \\c0040w0035p\Rescan\Joritz
+nerdctl run -d --name joritz-logaggregator --restart=always -v
+/app_data/SHARES/JORITZ_LOG_AGGREGATOR/CONFIG/logstash.conf:/usr/share/logstash/pipeline/l
+ogstash.conf -v /app_data/SHARES/JORITZ_LOG_AGGREGATOR/CERTIFICATES:/joritz-ssl/ -v
+/app_data/SHARES/JORITZ_LOG_AGGREGATOR/CONFIG/jvm.options:/usr/share/logstash/config/jvm.
+options -v
+/app_data/SHARES/JORITZ_LOG_AGGREGATOR/CONFIG/logstash.yml:/usr/share/logstash/config/logs
+tash.yml -p 6443:5044 joritzprodrepo.azurecr.io/logstash/logstash-oss_8.2.3:JORITZ_v2.0
